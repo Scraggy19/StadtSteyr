@@ -10,6 +10,8 @@
     <header>
         <h1 align="left">Willkommen in Steyr</h1>
         <img src="bilder/logo.png" alt="Logo Steyr" class="logo">
+
+        <button id="darkmode-toggle" class="mode-btn">🌙 Dark Mode</button>
     </header>
 
     <nav>
@@ -62,6 +64,21 @@
             </a>
         </div>
     </main>
-
+    <script>
+    const btn = document.getElementById("darkmode-toggle");
+    
+    btn.addEventListener("click", function() {
+        // Schaltet die Klasse .dark-mode am body an/aus
+        document.body.classList.toggle("dark-mode");
+        
+        // Button-Text anpassen
+        if (document.body.classList.contains("dark-mode")) {
+            btn.textContent = "☀️ Light Mode";
+        } else {
+            btn.textContent = "🌙 Dark Mode";
+        }
+    });
+    </script>
 </body>
+
 </html>
