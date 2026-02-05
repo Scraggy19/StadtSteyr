@@ -113,40 +113,37 @@ body.dark-mode nav {
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* ERZWINGE DIE NEBENEINANDER-AUSRICHTUNG */
-nav {
+/* Wir sprechen den body davor an, um die Priorität zu erhöhen */
+html body nav {
     display: flex !important;
-    flex-direction: row !important; /* Erzwingt die Zeile */
-    justify-content: space-between !important; /* Links nach links, Button nach rechts */
+    flex-direction: row !important;
+    justify-content: space-between !important;
     align-items: center !important;
+    background-color: #005fa3 !important; /* Steyr Blau */
     padding: 10px 20px !important;
-    background-color: #005fa3 !important;
+    height: auto !important;
 }
 
-/* SORGT DAFÜR, DASS DIE LINKS LINKS BLEIBEN */
-.nav-links {
-    display: block !important;
-}
-
-/* DER BUTTON-STYLE (STILISTISCH ANGEPASST) */
-.mode-btn {
-    background-color: rgba(255, 255, 255, 0.2) !important; /* Dezentes Transparent-Weiß */
+/* Stil für den Button */
+html body .mode-btn {
+    display: inline-block !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
     color: white !important;
     border: 1px solid white !important;
-    padding: 6px 14px !important;
-    border-radius: 20px !important; /* Abgerundet */
+    padding: 6px 15px !important;
+    border-radius: 20px !important;
     cursor: pointer !important;
-    font-family: Arial, sans-serif !important;
-    font-size: 13px !important;
     font-weight: bold !important;
+    font-size: 14px !important;
     transition: all 0.3s ease !important;
-    white-space: nowrap !important; /* Verhindert Zeilenumbruch im Button */
+    margin-left: 20px !important;
+    white-space: nowrap !important;
 }
 
-/* HOVER-EFFEKT FÜR DEN BUTTON */
-.mode-btn:hover {
+/* Hover-Effekt */
+html body .mode-btn:hover {
     background-color: white !important;
     color: #005fa3 !important;
 }
+
 
