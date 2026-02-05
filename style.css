@@ -77,4 +77,39 @@ ul {
 
 li {
     margin-bottom: 10px;
+
+}
+/* --- DARK MODE LOGIK --- */
+
+/* 1. Variablen definieren */
+:root {
+    --dark-bg-body: #121212;
+    --dark-bg-main: #1e1e1e;
+    --dark-text: #e0e0e0;
+    --dark-blue: #4da3ff;
+}
+
+/* 2. Diese Regeln greifen NUR, wenn .dark-mode aktiv ist */
+body.dark-mode {
+    background-color: var(--dark-bg-body) !important;
+    color: var(--dark-text) !important;
+}
+
+body.dark-mode main {
+    background-color: var(--dark-bg-main) !important;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode a {
+    color: var(--dark-blue) !important;
+}
+
+body.dark-mode nav {
+    background-color: #002d4d !important;
+}
+
+/* Sanfter Übergang für alle Elemente */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
