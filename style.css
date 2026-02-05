@@ -28,11 +28,15 @@ h1 {
 
 /* Navigation */
 nav {
-    background-color: #005fa3;
+    background-color: var(--nav-bg);
     color: white;
-    padding: 10px;
+    padding: 5px 20px;
     margin: 10px 0;
-    text-align: left;
+    
+    /* Das hier schiebt den Button nach rechts */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
 }
 
 nav a {
@@ -112,4 +116,21 @@ body.dark-mode nav {
 /* Sanfter Übergang für alle Elemente */
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mode-btn {
+    background-color: rgba(255, 255, 255, 0.2); /* Leicht durchsichtiges Weiß */
+    color: white;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 20px;         /* Macht den Button oval/modern */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8em;
+    transition: background 0.3s;
+}
+
+.mode-btn:hover {
+    background-color: white;     /* Button wird weiß beim Drüberfahren */
+    color: #005fa3;              /* Schrift wird dann blau */
 }
