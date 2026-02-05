@@ -28,15 +28,11 @@ h1 {
 
 /* Navigation */
 nav {
-    background-color: var(--nav-bg);
-    color: white;
-    padding: 5px 20px;
-    margin: 10px 0;
-    
-    /* Das hier schiebt den Button nach rechts */
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
+    display: flex;               /* Macht die Navi-Leiste flexibel */
+    justify-content: space-between; /* Schiebt Links nach links, Button nach rechts */
+    align-items: center;         /* Zentriert alles vertikal */
+    background-color: #005fa3;   /* Dein Standard-Blau */
+    padding: 10px 20px;
 }
 
 nav a {
@@ -134,3 +130,4 @@ body {
     background-color: white;     /* Button wird weiß beim Drüberfahren */
     color: #005fa3;              /* Schrift wird dann blau */
 }
+
