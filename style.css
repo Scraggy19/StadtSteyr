@@ -114,20 +114,39 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.mode-btn {
-    background-color: rgba(255, 255, 255, 0.2); /* Leicht durchsichtiges Weiß */
-    color: white;
-    border: 1px solid white;
-    padding: 5px 15px;
-    border-radius: 20px;         /* Macht den Button oval/modern */
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 0.8em;
-    transition: background 0.3s;
+/* ERZWINGE DIE NEBENEINANDER-AUSRICHTUNG */
+nav {
+    display: flex !important;
+    flex-direction: row !important; /* Erzwingt die Zeile */
+    justify-content: space-between !important; /* Links nach links, Button nach rechts */
+    align-items: center !important;
+    padding: 10px 20px !important;
+    background-color: #005fa3 !important;
 }
 
+/* SORGT DAFÜR, DASS DIE LINKS LINKS BLEIBEN */
+.nav-links {
+    display: block !important;
+}
+
+/* DER BUTTON-STYLE (STILISTISCH ANGEPASST) */
+.mode-btn {
+    background-color: rgba(255, 255, 255, 0.2) !important; /* Dezentes Transparent-Weiß */
+    color: white !important;
+    border: 1px solid white !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important; /* Abgerundet */
+    cursor: pointer !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important; /* Verhindert Zeilenumbruch im Button */
+}
+
+/* HOVER-EFFEKT FÜR DEN BUTTON */
 .mode-btn:hover {
-    background-color: white;     /* Button wird weiß beim Drüberfahren */
-    color: #005fa3;              /* Schrift wird dann blau */
+    background-color: white !important;
+    color: #005fa3 !important;
 }
 
